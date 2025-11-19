@@ -240,23 +240,19 @@ def main():
     print("=" * 70)
     print()
     
-    # Читання CSV файлу
     employees = read_csv_data('employees.csv')
     
     if employees is None:
         sys.exit(1)
     
-    # Аналіз даних
     print("Аналіз даних...")
     gender_stats = analyze_gender(employees)
     age_stats = analyze_age_categories(employees)
     gender_age_stats = analyze_gender_by_age(employees)
     print()
     
-    # Виведення статистики
     print_statistics(gender_stats, age_stats, gender_age_stats)
     
-    # Побудова діаграм
     print("=" * 70)
     print("Побудова діаграм...")
     print("=" * 70)

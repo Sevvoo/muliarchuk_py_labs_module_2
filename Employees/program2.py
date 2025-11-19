@@ -153,19 +153,15 @@ def read_csv_and_create_xlsx(csv_filename='employees.csv', xlsx_filename='employ
         traceback.print_exc()
         return False
 
-
 def main():
     print("=" * 70)
     print("Програма 2 - Створення XLSX файлу з віковими категоріями")
     print("=" * 70)
     print()
     
-    # Виконання основної логіки
     success = read_csv_and_create_xlsx('employees.csv', 'employees.xlsx')
     
-    # Код повернення
     sys.exit(0 if success else 1)
-
 
 if __name__ == "__main__":
     main()

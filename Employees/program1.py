@@ -36,7 +36,6 @@ def generate_employee_record(gender):
     
     birth_date = fake.date_of_birth(minimum_age=17, maximum_age=87)
     
-    # Генерація інших даних
     position = fake.job()
     city = fake.city()
     address = fake.address()
@@ -79,7 +78,7 @@ def generate_csv_file(filename='employees.csv', num_records=500):
             if i % 100 == 0:
                 print(f"Згенеровано {i} записів...")
     
-    print(f"\n✅ Успішно створено файл '{filename}' з {num_records} записами!")
+    print(f"\n Успішно створено файл '{filename}' з {num_records} записами!")
     print(f"   - Чоловіків: {genders.count('M')} ({genders.count('M')/num_records*100:.1f}%)")
     print(f"   - Жінок: {genders.count('F')} ({genders.count('F')/num_records*100:.1f}%)")
 
